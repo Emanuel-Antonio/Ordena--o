@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void imprimir_vetor(int vetor[], int tamanho)
+void imprimir_vetor(int *vetor, int tamanho)
 {
   int i;
 
@@ -13,7 +13,7 @@ void imprimir_vetor(int vetor[], int tamanho)
   printf("\n");
 }
 
-void merge_sort(int vetor[], int ini, int fim, int tamanho)
+void merge_sort(int *vetor, int ini, int fim, int tamanho)
 {
   int meio, i, j, k, aux[tamanho];
   // tamanho do vetor é maior que 1?
@@ -68,7 +68,7 @@ int main()
     printf("vetor %d = ",i+1);
     scanf("%d", &vetor[i]);
   }
-  printf(" ");
+  printf("\n");
 
   printf("Vetor original: ");
   imprimir_vetor(vetor, tamanho);
